@@ -1,6 +1,11 @@
-Clone the repository.
+## Clone the repository.
 
-Inside the project execute 
+### Inside the project execute 
+ 
+```
+npm install 
+```
 
-1. npm install
-2. gulp
+```
+gulp
+```
