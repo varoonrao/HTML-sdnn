@@ -61,3 +61,29 @@
     }
   }
 }
+
+.region-navigation {
+  .menu--account {
+    @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      text-align: unset;
+      position: unset;
+      margin: unset;
+      .menu {
+        flex-direction: column;
+        background: none;
+        width: 100%;
+
+        .menu-item {
+          margin-left: unset;
+          width: 100%;
+
+          a {
+            color: var(--color--white);
+            font-family: $font-lato--semibold;
+            font-size: $font-size--base;
+          }
+        }
+      }
+    }
+  }
+}
