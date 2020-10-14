@@ -55,7 +55,7 @@
 .region-post-header {
   .menu--account {
     display: none;
-    
+
     @include media-breakpoint-up(md) {
       display: block;
     }
