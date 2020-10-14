@@ -29,13 +29,13 @@ gulp.task('browserSync', function () {
   })
 })
 gulp.task('autoprefixer', () =>
-  gulp.src('src/css/*.css')
+  gulp.src('dist/css/*.css')
 
   .pipe(autoprefixer({
     browsers: ['last 10  versions'],
     cascade: false
   }))
-  .pipe(gulp.dest('src/css'))
+  .pipe(gulp.dest('dist/css'))
 );
 
 gulp.task('sass', function () {
@@ -45,7 +45,7 @@ gulp.task('sass', function () {
 
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('src/css')) // Outputs it in the css folder
+    .pipe(gulp.dest('dist/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
     }));
