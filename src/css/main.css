@@ -10,7 +10,7 @@ N.B please don't write any styling in this file. This file is used only to impor
   Configuration settings of the theme.
  */
 /*!
- * Bootstrap v4.5.2 (https://getbootstrap.com/)
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -190,7 +190,8 @@ caption {
   caption-side: bottom; }
 
 th {
-  text-align: inherit; }
+  text-align: inherit;
+  text-align: -webkit-match-parent; }
 
 label {
   display: inline-block;
@@ -2654,7 +2655,8 @@ input[type="button"].btn-block {
   z-index: 1;
   display: block;
   min-height: 1.5rem;
-  padding-left: 1.5rem; }
+  padding-left: 1.5rem;
+  color-adjust: exact; }
 
 .custom-control-inline {
   display: inline-flex;
@@ -3713,6 +3715,7 @@ input[type="button"].btn-block {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
     padding: 0.75rem 1.25rem;
     color: inherit; }
 
@@ -7107,7 +7110,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .text-break {
   word-break: break-word !important;
-  overflow-wrap: break-word !important; }
+  word-wrap: break-word !important; }
 
 .text-reset {
   color: inherit !important; }
@@ -7693,7 +7696,7 @@ li {
   Configuration settings of the theme.
  */
 /*!
- * Bootstrap v4.5.2 (https://getbootstrap.com/)
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -7873,7 +7876,8 @@ caption {
   caption-side: bottom; }
 
 th {
-  text-align: inherit; }
+  text-align: inherit;
+  text-align: -webkit-match-parent; }
 
 label {
   display: inline-block;
@@ -10337,7 +10341,8 @@ input[type="button"].btn-block {
   z-index: 1;
   display: block;
   min-height: 1.5rem;
-  padding-left: 1.5rem; }
+  padding-left: 1.5rem;
+  color-adjust: exact; }
 
 .custom-control-inline {
   display: inline-flex;
@@ -11396,6 +11401,7 @@ input[type="button"].btn-block {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
     padding: 0.75rem 1.25rem;
     color: inherit; }
 
@@ -14802,7 +14808,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .text-break {
   word-break: break-word !important;
-  overflow-wrap: break-word !important; }
+  word-wrap: break-word !important; }
 
 .text-reset {
   color: inherit !important; }
@@ -15066,8 +15072,7 @@ a.text-dark:hover, a.text-dark:focus {
     transition: all 0.25s ease-in-out;
     opacity: 0;
     background: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
-    padding-left: unset; }
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5); }
     .menu--main > .menu .menu-item--expanded .menu .menu-item {
       padding-right: 0; }
       .menu--main > .menu .menu-item--expanded .menu .menu-item a {
@@ -15145,7 +15150,7 @@ a.text-dark:hover, a.text-dark:focus {
       background: url("../../assets/images/close.svg") no-repeat center center;
       background-size: 34px; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .menu--account {
     position: relative;
     margin: 30px 0;
@@ -15163,7 +15168,7 @@ a.text-dark:hover, a.text-dark:focus {
 .menu--account .menu {
   display: flex;
   flex-flow: column nowrap; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .menu--account .menu {
       display: inline-flex;
       flex-flow: row nowrap;
@@ -15171,7 +15176,7 @@ a.text-dark:hover, a.text-dark:focus {
       align-items: center;
       background: var(--color--white); } }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .menu--account .menu-item {
     margin-left: 60px; } }
 
@@ -15182,21 +15187,40 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 16px;
   font-family: "LatoSemiBold";
   color: var(--color--white); }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .menu--account a {
       color: var(--color--grey);
       font-size: 14px;
       font-family: "LatoMedium"; } }
 
-@media (min-width: 768px) {
+.region-post-header .menu--account {
+  display: none; }
+  @media (min-width: 768px) {
+    .region-post-header .menu--account {
+      display: block; } }
+
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .region-navigation .menu--account {
-    display: none; } }
+    text-align: unset;
+    position: unset;
+    margin: unset; }
+    .region-navigation .menu--account .menu {
+      flex-direction: column;
+      background: none;
+      width: 100%; }
+      .region-navigation .menu--account .menu .menu-item {
+        margin-left: unset;
+        width: 100%; }
+        .region-navigation .menu--account .menu .menu-item a {
+          color: var(--color--white);
+          font-family: "LatoSemiBold";
+          font-size: 16px; } }
 
 /**
   Configuration settings of the theme.
  */
 /*!
- * Bootstrap v4.5.2 (https://getbootstrap.com/)
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -15376,7 +15400,8 @@ caption {
   caption-side: bottom; }
 
 th {
-  text-align: inherit; }
+  text-align: inherit;
+  text-align: -webkit-match-parent; }
 
 label {
   display: inline-block;
@@ -17840,7 +17865,8 @@ input[type="button"].btn-block {
   z-index: 1;
   display: block;
   min-height: 1.5rem;
-  padding-left: 1.5rem; }
+  padding-left: 1.5rem;
+  color-adjust: exact; }
 
 .custom-control-inline {
   display: inline-flex;
@@ -18899,6 +18925,7 @@ input[type="button"].btn-block {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
     padding: 0.75rem 1.25rem;
     color: inherit; }
 
@@ -22317,7 +22344,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .text-break {
   word-break: break-word !important;
-  overflow-wrap: break-word !important; }
+  word-wrap: break-word !important; }
 
 .text-reset {
   color: inherit !important; }
@@ -22524,7 +22551,7 @@ a.text-dark:hover, a.text-dark:focus {
 #search-placeholder {
   position: absolute;
   top: 30px;
-  left: 150px; }
+  left: 170px; }
 
 #close-search {
   position: absolute;
@@ -22554,7 +22581,7 @@ a.text-dark:hover, a.text-dark:focus {
   Configuration settings of the theme.
  */
 /*!
- * Bootstrap v4.5.2 (https://getbootstrap.com/)
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -22734,7 +22761,8 @@ caption {
   caption-side: bottom; }
 
 th {
-  text-align: inherit; }
+  text-align: inherit;
+  text-align: -webkit-match-parent; }
 
 label {
   display: inline-block;
@@ -25198,7 +25226,8 @@ input[type="button"].btn-block {
   z-index: 1;
   display: block;
   min-height: 1.5rem;
-  padding-left: 1.5rem; }
+  padding-left: 1.5rem;
+  color-adjust: exact; }
 
 .custom-control-inline {
   display: inline-flex;
@@ -26257,6 +26286,7 @@ input[type="button"].btn-block {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
     padding: 0.75rem 1.25rem;
     color: inherit; }
 
@@ -29699,7 +29729,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .text-break {
   word-break: break-word !important;
-  overflow-wrap: break-word !important; }
+  word-wrap: break-word !important; }
 
 .text-reset {
   color: inherit !important; }
